@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: Mukta;
+}
+
+a {
+    text-decoration: none; /*tüm linklerdeki altyazıların kaldırılması için*/
+}
+
+#nav-links ul {
+    list-style-type: none;
+}
+
+.img-fluid {
+    max-width: 256px;
+    height: auto;
+
+}
+
+.text-upper-case {
+    text-transform: uppercase;
+
+}
+
+/*navbar*/
+nav {
+    font-family: Mukta;
+    background-color: rebeccapurple;
+    color: white;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    position: fixed;
+    width: 100%;
+    z-index: 500; /*navbarın tüm ögelerin üzerinde olması için*/
+}
+
+.clear-fix::after { /*iki farklı divdeki floatların karışmaması için kullanılır*/
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+}
+
+#logo-box {
+    float: left;
+    padding-top: 0.5rem;
+}
+
+#logo-box .logo {
+    color: white;
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+#nav-links {
+    float: right;
+}
+
+#nav-links .nav-item {
+    float: left;
+    margin: 0.5rem;
+}
+
+#nav-links .nav-link {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: block;
+    padding: 1.6rem; /*maddeler arasında boşluk oluşturmak için*/
+    letter-spacing: 0.1rem; /*harfler arasında boşluk oluşturmak için*/
+    transition: color 0.4s;
+}
+
+#nav-links .nav-link:hover {
+    color: mediumpurple;
+}
+
+header {
+    background-color: #1ABC9B;
+    height: 700px;
+    padding-top: calc(136px + 6rem); /*navbar 106px'lik yer kaplıyor*/
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 6rem;
+}
+
+hr.star-light {
+    border-color: white;
+}
+
+hr.star-dark {
+    border-color: rebeccapurple;
+}
+
+.star-light, .star-dark {
+    border: none;
+    border-top: 0.4rem solid white;
+    max-width: 250px;
+    border-radius: 10px;
+    margin: 2.5rem auto;
+    overflow: visible; /*yıldızı görünür yapmak için*/
+    height: 0;
+}
+
+.star-light::after {
+    color: white;
+    background-color: #1ABC9B;
+}
+
+.star-dark::after {
+    color: rebeccapurple;
+    background-color: white;
+}
+
+.star-light::after, .star-dark::after {
+    position: relative; /*yıldızı yukarı taşımak için topla beraber kullanıldı*/
+    content: "\2605";
+    font-weight: 900;
+    font-size: 3.2rem;
+    top: -25px;
+    padding: 0 8px;
+}
+
+header h2 {
+    color: white;
+    font-size: 2.4rem;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+}
+
+/*portfolio*/
+
+
+#portfolio {
+    height: 600px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 4.8rem;
+    color: rebeccapurple;
+}
+
+.col {
+    float: left;
+    width: 33.333%;
+    padding: 10px;
+
+}
+
+.portfolio-item {
+}
+
+.img-fluid-p {
+    max-width: 100%;
+    height: auto;
+}
