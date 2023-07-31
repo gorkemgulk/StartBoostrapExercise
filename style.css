@@ -16,6 +16,51 @@ body {
     background-color: white;
 }
 
+section{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+.btn{
+    font-size: 2rem;
+    display: inline-block;
+    font-weight: 400;
+    border: white solid 2px;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.btn-outline{
+    color:white;
+    border-color:white;
+    background-color: transparent;
+    margin-top: 2rem;
+    padding: 2.2rem 1.6rem;
+
+}
+.btn-primary{
+    background-color: rebeccapurple;
+    color:white;
+    border-color: rebeccapurple;
+    padding: 1rem 7rem;
+}
+
+.btn-primary:hover{
+    background-color: mediumpurple;
+    border-color:mediumpurple;
+    border-radius: 0.4rem;
+
+}
+
+.btn-outline:hover{
+    background-color: white;
+    color: mediumpurple;
+    border-color:mediumpurple;
+    border-radius: 0.4rem;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     font-family: Mukta;
@@ -37,7 +82,6 @@ a {
 
 .text-upper-case {
     text-transform: uppercase;
-
 }
 
 /*navbar*/
@@ -140,7 +184,7 @@ hr.star-dark {
 }
 
 .star-light::after, .star-dark::after {
-    position: relative; /*yıldızı yukarı taşımak için topla beraber kullanıldı*/
+    position: relative; /*yıldızı yukarı taşımak için top ile beraber kullanıldı*/
     content: "\2605";
     font-weight: 900;
     font-size: 3.2rem;
@@ -159,10 +203,7 @@ header h2 {
 
 
 #portfolio {
-    height: 600px;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    text-align: center;
+
 }
 
 #portfolio h2 {
@@ -177,10 +218,110 @@ header h2 {
 
 }
 
-.portfolio-item {
-}
-
 .img-fluid-p {
     max-width: 100%;
     height: auto;
+}
+
+.portfolio-item {
+    position: relative;
+}
+
+.portfolio-item img{
+    display: block;
+    border-radius: 13px;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1ABC9B;
+    opacity: 0;
+    transition: opacity 0.4s;
+    border-radius: 13px;
+}
+
+.overlay .icon{
+    color: white;
+    font-size: 8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /*ortalaması için*/
+}
+
+.portfolio-item:hover .overlay{
+    opacity: 0.8;
+}
+
+
+/*about*/
+
+#about{
+    background-color: #1ABC9B;
+    color: white;
+}
+
+#about h2{
+    font-size: 4.8rem;
+}
+
+#about-text{
+    text-align: left;
+}
+
+#about-text .left{
+    float: left;
+    width: 50%;
+    padding-right: 2rem;
+    padding-left: 23rem;
+}
+
+#about-text .right{
+    float: right;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 23rem;
+}
+
+#about-text .text{
+    font-size: 2.2rem;
+}
+
+/*contact*/
+
+#contact h2{
+    font-size: 4.8rem;
+    color:rebeccapurple;
+}
+
+#contact form{
+    width: 70%;
+    margin:0 auto;
+    text-align: left;
+
+}
+
+.form-group{
+    border-bottom: 1px solid mediumpurple;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+
+.form-group input, .form-group textarea{
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.form-group input:focus{
+    outline: 0; /*input alanlara geldiğimizde çerçeve alanını kaldırmak için*/
+}
+
+.form-group textarea:focus{
+    outline: 0;
 }
