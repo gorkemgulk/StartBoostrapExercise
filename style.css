@@ -22,8 +22,12 @@ section{
     text-align: center;
 }
 
-.btn{
+.btn-large{
     font-size: 2rem;
+    padding: 2.2rem 1.6rem;
+}
+
+.btn{
     display: inline-block;
     font-weight: 400;
     border: white solid 2px;
@@ -31,12 +35,24 @@ section{
     cursor: pointer;
     transition: all 0.4s;
 }
+
+.btn-social {
+    width : 5rem;
+    height: 5rem ;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.btn-social:hover{
+    border-radius: 50%;
+}
+
 .btn-outline{
     color:white;
     border-color:white;
     background-color: transparent;
     margin-top: 2rem;
-    padding: 2.2rem 1.6rem;
 
 }
 .btn-primary{
@@ -57,7 +73,6 @@ section{
     background-color: white;
     color: mediumpurple;
     border-color:mediumpurple;
-    border-radius: 0.4rem;
 }
 
 
@@ -324,4 +339,36 @@ header h2 {
 
 .form-group textarea:focus{
     outline: 0;
+}
+
+/*footer*/
+
+footer{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: rebeccapurple;
+    color : white;
+    text-align: center; /*yazıların ortada olması için*/
+}
+
+footer h4{
+    font-size: 2.4rem;
+}
+
+footer p {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+footer li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.copy-right{
+    background-color: mediumpurple;
+    padding-top: 4rem;
+    padding-bottom: 2.4rem;
+    color: white;
+    text-align: center;
 }
