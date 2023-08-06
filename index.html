@@ -32,8 +32,12 @@
             <a href="/" class="logo text-upper-case">Start Bootstrap</a>
         </div>
 
-        <div id="nav-links">
+        <div id="nav-links" class="responsive">
             <ul>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-upper-case nav-icon">
+                        <i class="fa-solid fa-bars"></i></a>
+                </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link text-upper-case">Portfolio</a>
                 </li>
@@ -219,9 +223,19 @@
 <div class="copy-right">
     <div class="container">
         <small>
-          <b> Copyright @ Your Website 2023 </b>
+            <b> Copyright @ Your Website 2023 </b>
         </small>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+<script>
+    $(".nav-icon").click(function () {
+        $("#nav-links").toggleClass("responsive");
+        return false;
+    });
+</script>
 </body>
 </html>
